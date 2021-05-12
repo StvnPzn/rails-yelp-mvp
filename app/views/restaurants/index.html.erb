@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>
+    Restaurants lists
+    <%= link_to new_restaurant_path do %>
+      <i class="fas fa-plus-square"></i>
+    <% end %>
+  </h1>
+    <% @restaurants.each do |restaurant| %>
+      <h2><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h2>
+    <% end %>
+</div>
